@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_scan_barcode"
+            android:layout_width="0dp"
+            android:layout_height="225dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rect_stroke_rounded_3_grayf4_graydd"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label"
+                    android:textColor="@color/ocean_green"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    tools:ignore="SpUsage,TextContrastCheck" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.example.barcode.ui.widget.WidgetInputBoxClearSearch
+                        android:id="@+id/barcode_edt"
+                        style="@style/AppTheme.BasicInputBox"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        app:box_clear_visible="true"
+                        app:box_highlight="false"
+                        app:box_imeOptions="3"
+                        app:box_inputType="1"
+                        app:box_text=""
+                        app:box_text_color="@color/black"
+                        app:box_text_hint_color="@color/gray_66"
+                        app:box_text_size="12" />
+
+                    <ImageButton
+                        android:id="@+id/btn_qr"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/rect_solid_rounded_3_viridian"
+                        android:src="@drawable/ic_menu_2_scan"
+                        tools:ignore="ContentDescription,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout">
+
+                <TextView
+                    android:id="@+id/tv_guide_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/label"
+                    android:textColor="@color/textSubPrimary"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_scan_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:background="@drawable/rect_stroke_rounded_3_grayf4_graydd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_no"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_no_value"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginStart="26dp"
+                android:background="@drawable/rect_solid_rounded_3_oceangreen"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/label"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_no"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_no"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_no"
+                tools:ignore="SpUsage" />
+
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_order"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_no"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_order_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="@string/label"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_order"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_order"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_order"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/tv_cust_type"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_order"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/tv_cust_type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="@string/label"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_cust_type"
+                app:layout_constraintStart_toEndOf="@+id/tv_cust_type"
+                app:layout_constraintTop_toTopOf="@+id/tv_cust_type"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_material"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cust_type"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_material_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="@string/label"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_material"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_material"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_material"
+                tools:ignore="SpUsage" />
+
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_qty"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_material"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_qty_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="@string/label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_qty"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_qty"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_qty"
+                tools:ignore="SpUsage" />
+
+            <LinearLayout
+                android:id="@+id/layout_scan_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_qty"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_qty"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_qty">
+
+                <EditText
+                    android:id="@+id/edt_qty_value"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="26dp"
+                    android:background="@drawable/rect_solid_rounded_3_white_stroke_gray_dd"
+                    android:gravity="start|center"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/viridian"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    tools:ignore="LabelFor,SpUsage" />
+
+                <TextView
+                    android:id="@+id/tv_qty_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/label"
+                    android:textColor="@color/viridian"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    tools:ignore="SpUsage" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_slocation"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_qty"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_slocation_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:text="@string/label"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_slocation"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_slocation"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_slocation"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_bin"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_slocation"
+                tools:ignore="SpUsage" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_warehousing_detail_scan_info_bin_value"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="26dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_bin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_bin"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_bin">
+
+                <TextView
+                    android:id="@+id/tv_bin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+
+                <LinearLayout
+                    android:id="@+id/layout_bin_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_bin_info"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_solid_rounded_3_white_stroke_gray_dd"
+                        android:gravity="start|center"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="@dimen/sp_15"
+                        tools:ignore="SpUsage" />
+
+                    <ImageView
+                        android:layout_width="46dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@drawable/btn_modi_form"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/cl_warehousing_detail_scan_info_cy"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/label"
+                android:textColor="@color/textSubPrimary"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_bin"
+                tools:ignore="SpUsage" />
+
+            <LinearLayout
+                android:id="@+id/layout_cy_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/cl_warehousing_detail_scan_info_cy"
+                app:layout_constraintStart_toEndOf="@+id/cl_warehousing_detail_scan_info_cy"
+                app:layout_constraintTop_toTopOf="@+id/cl_warehousing_detail_scan_info_cy">
+
+                <CheckBox
+                    android:id="@+id/cb_bin_cy"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:button="@drawable/checkbox_normal_background"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="SpUsage"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_warehousing_detail_scan_info_cy" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

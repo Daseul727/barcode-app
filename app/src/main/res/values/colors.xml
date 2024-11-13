@@ -7,4 +7,82 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- 기본 칼라 이름 -->
+    <color name="yellow">#f5bf1e</color>
+    <color name="marigold">#ffcb04</color>
+    <color name="orange">#ec6608</color>
+    <color name="red">#ff0000</color>
+    <color name="cherry_red">#ed1c24</color>
+    <color name="denim">#315a74</color>
+    <color name="grayish_brown">#575756</color>
+    <color name="blue">#0000ff</color>
+    <color name="pea">#a1d127</color>
+    <color name="ocean_green">#348c57</color>
+    <color name="lightblue">#6bbfed</color>
+    <color name="egg_blue">#d7efe0</color>
+    <color name="blue_26">#2659ff</color>
+
+    <!-- 전략적 칼라 지정 -->
+    <color name="viridian">#209956</color>
+
+    <!-- 칼라의 이름을 목적어로 사용 -->
+    <color name="colorPrimary">@color/viridian</color>
+    <color name="colorAccent">#209956</color>
+    <color name="textPrimary">@color/gray_900</color>
+    <color name="textPrimaryHint">#B1B1B1</color>
+    <color name="textSubPrimary">@color/gray_600</color>
+
+    <!-- zeplin color -->
+    <color name="gray_44">#444444</color>
+    <color name="gray_44_opacity_80">#CC444444</color>
+    <color name="gray_66">#666666</color>
+    <color name="gray_66_opacity_30">#4C666666</color>
+    <color name="gray_99">#999999</color>
+    <color name="gray_f0">#f0f0f0</color>
+    <color name="gray_f4">#f4f4f4</color>
+    <color name="gray_7d">#7d7d7d</color>
+    <color name="gray_3d">#3d3d3d</color>
+    <color name="gray_33">#333333</color>
+    <color name="gray_33_opacity_50">#80333333</color>
+    <color name="gray_33_opacity_80">#CC333333</color>
+    <color name="gray_80">#808080</color>
+    <color name="gray_91">#919191</color>
+    <color name="gray_8c">#8c8c8c</color>
+    <color name="gray_b4">#b4b4b4</color>
+    <color name="gray_e5">#e5e5e5</color>
+    <color name="gray_22">#222222</color>
+    <color name="gray_40">#404040</color>
+    <color name="gray_40_opacity_20">#33404040</color>
+    <color name="gray_aa">#aaaaaa</color>
+    <color name="gray_dd">#dddddd</color>
+    <color name="gray_ee">#eeeeee</color>
+    <color name="gray_d7">#d7d7d7</color>
+    <color name="gray_b7">#b7b7b7</color>
+    <color name="gray_73">#737373</color>
+    <color name="gray_44_70">#B3444444</color>
+    <color name="gray_1e">#1e1e1e</color>
+    <color name="gray_02">#020202</color>
+
+    <!-- material 칼라-->
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+
+    <!-- common -->
+    <color name="transparent">#00000000</color>
+    <color name="status_bar_color">@color/transparent</color>
+    <color name="manager_color">#8ce6b4</color>
+
+    <!-- from previous project -->
+    <drawable name="transparent">#00000000</drawable>
+
+
 </resources>

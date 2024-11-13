@@ -14,4 +14,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- input box -->
+    <style name="AppTheme.BasicInputBox">
+        <item name="box_bg_error">@drawable/rect_stroke_rounded_red</item>
+        <item name="box_bg_off">@drawable/rect_stroke_rounded_3_white_graydd</item>
+        <item name="box_bg_on">@drawable/rect_stroke_rounded_3_white_graydd</item>
+    </style>
+
 </resources>

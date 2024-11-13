@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomToolBar">
+        <attr name="title" format="string" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="mode">
+            <flag name="home" value="0" />
+            <flag name="etc" value="1" />
+            <flag name="back" value="2" />
+
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="InputBox">
+        <attr name="box_title" format="reference|string" />
+        <attr name="box_text" format="reference|string" />
+        <attr name="box_text_color" format="reference|color" />
+        <attr name="box_text_size" format="reference|integer" />
+        <attr name="box_text_maxlength" format="reference|integer" />
+        <attr name="box_text_hint" format="reference|string" />
+        <attr name="box_text_hint_color" format="reference|color" />
+        <attr name="box_highlight" format="reference|boolean" />
+        <attr name="box_editable" format="reference|boolean" />
+        <attr name="box_clear_visible" format="reference|boolean" />
+        <attr name="box_password_enable" format="reference|boolean" />
+        <attr name="box_password_visible" format="reference|boolean" />
+        <attr name="box_imeOptions" format="reference|integer" />
+        <attr name="box_inputType" format="reference|integer" />
+        <attr name="box_bg_on" format="reference|integer" />
+        <attr name="box_bg_off" format="reference|integer" />
+        <attr name="box_bg_error" format="reference|integer" />
+        <attr name="box_vertical_offset" format="reference|integer" />
+        <attr name="box_front_icon" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCanvas">
+        <attr name="canvas_percent" format="reference|integer" />
+    </declare-styleable>
+</resources>

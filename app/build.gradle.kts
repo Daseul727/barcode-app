@@ -72,6 +72,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    /*Hilt*/
     val daggerHiltVersion = "2.51"
 
     implementation("com.google.dagger:dagger:$daggerHiltVersion")
@@ -81,4 +82,9 @@ dependencies {
     kapt("com.google.dagger:dagger-android-processor:$daggerHiltVersion")
     implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
     kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
+
+    /*constraint layout*/
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+
     }
