@@ -83,8 +83,15 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$daggerHiltVersion")
     kapt("com.google.dagger:hilt-android-compiler:$daggerHiltVersion")
 
+    //Logger: 로그 관련 lib
+    implementation("com.orhanobut:logger:2.2.0")
+
     /*constraint layout*/
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+
+    // play service for code scanner
+    implementation("com.google.android.gms:play-services-code-scanner:16.1.0")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0") // 최신 버전 확인 후 적용
 
     }
